@@ -1,0 +1,5 @@
+https://en.wikipedia.org/wiki/Main_Page
+
+This is Base links which further gives out hyper-links to scrap data from the links
+
+      
