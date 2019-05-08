@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class StopWord {
 
     public static List<String> stop_words = new ArrayList<>();
-    // Class to eradicate stop words from results.
+    // Class to eradicates stop words from results.
     // Even if we put stop words to search, it will print there are no such words in the results.
 
     static {

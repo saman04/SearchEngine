@@ -30,7 +30,8 @@ public class WebScraper {
             //Looping through all the paragraphs
             for (Element para : paragraph) {
                 String p = para.text();
-                p = p.replaceAll("[,.!?:;()-]", "\\s");//removing all the punctuations and replacing with blank spaces.
+                //removing all the punctuations and replacing with blank spaces.
+                p = p.replaceAll("[,.!?:;()-]", "\\s");
                 //for each of the above paragraph extract individual words and insert them in trie data structure.
 
                 for (String word : p.split(" ")) {
@@ -46,8 +47,6 @@ public class WebScraper {
             }
             int temp = PageRankingAlgo.getCount(searchWord, freqData);
             count = temp;
-//			System.out.println(searchWord+" found in "+ link + " "+myTrie.search(searchWord));
-//			System.out.println(searchWord+" occurred "+temp+" times ");
         } catch (Exception e) {
             e.printStackTrace();
         }

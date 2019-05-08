@@ -18,8 +18,7 @@ public class WordSearch {
 
         WebScraper d = new WebScraper();
         try {
-            // for(String link : links)
-            //{
+          
             Document document = Jsoup.connect(links.get(0)).get();
             Elements hylinks = document.select("a");
             for (Element hylin : hylinks) {
@@ -28,11 +27,11 @@ public class WordSearch {
                     links.add(hyper);
                 }
             }
-            //}
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
-        //looping through the above 6 links and calling the function to scrape only paragraphs through them.
+        //looping through the above links and calling the function to scrape only paragraphs through them.
         //Below is the call to store the words and find the word occurences.
         for (String link : links) {
             System.out.print(link + "\n");
